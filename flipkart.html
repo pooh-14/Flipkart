@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/c888f1e752.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Roboto, Arial, sans-serif;
+        }
+
+        #screen {
+            width: 100%;
+            /* border: 2px solid blue; */
+        }
+
+        #navbar {
+            width: 100%;
+            height: 55px;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #2874f0;
+            color: white;
+        }
+
+        #navbar>div:nth-child(1) {
+            width: 15%;
+            height: 55px;
+            /* border: 1px solid black; */
+            /* padding-left: 200px; */
+        }
+
+        #navbar>div:nth-child(2) {
+            width: 30%;
+            height: 55px;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            padding-left: 10px;
+        }
+
+        #navbar>div:nth-child(3) {
+            width: 10%;
+            height: 55px;
+            /* border: 1px solid black; */
+            padding-left: 40px;
+        }
+
+        #navbar>div:nth-child(4) {
+            width: 30%;
+            height: 55px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: 600;
+            padding-right: 70px;
+        }
+
+        #body {
+            width: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+        }
+
+        #body>div:nth-child(1) {
+            width: 18%;
+            /* border: 1px solid black; */
+            line-height: 25px;
+        }
+
+        #body>div:nth-child(1)>div {
+            border-bottom: 1px solid gray;
+            margin-left: 20px;
+
+        }
+
+        #body>div:nth-child(1)>div>h4 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        #product{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        #product>div{
+            width: 18%;
+            height: 370px;
+            margin-bottom: 20px;
+        }
+
+        #product>div>img{
+            width: 100%;
+            height: 70%;
+        }
+        #product>div>h4,p{
+            margin-left: 20px;
+            margin-bottom: 4px;
+        }
+        #product>div>h4:nth-child(4){
+            color: rgb(29, 128, 14);
+        }
+
+        #product>div>p:nth-child(3){
+            color:blue;
+        }
+        #product>div:hover{
+            border: 1px solid black;
+        }
+
+        @media screen and (max-width:416px) {
+            
+            #navbar>div:nth-child(3){
+                display: none;
+            }
+
+            #navbar>div:nth-child(4)>div:nth-child(1){
+                display: none;
+            }
+
+            #navbar>div:nth-child(4)>div:nth-child(2){
+                display: none;
+            }
+
+            /* #navbar>div:nth-child(4)>div:nth-child(3){
+                padding-left: 20px;
+            } */
+
+            #navbar>div:nth-child(1)>img{
+                width: 60px;
+                height:27px;
+               padding-right: 60px;
+            }
+            
+            #navbar>div:nth-child(2)>div:nth-child(1){
+                width: 200px;
+                height: 27px;
+                
+            }
+            
+            #product>div{
+            width: 36%;
+            height: 370px;
+            margin-bottom: 20px;
+        }
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <div style="width:85px; height:55px;">
+                <img src="./241.jpg" style="width: 100%; height: 100%;" />
+            </div>
+            <div style="width: 540px; height: 30px; background-color: white;">
+                <div>
+                    <input placeholder="Search for products, brands and more"
+                        style="width:95%; height: 100%; border: none; outline: none; " />
+                </div>
+                <div>
+                    <span style=" color: rgb(40, 116, 240); width:5%; height: 100%">
+                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Login"
+                    style="width: 100px; height: 30px; color: rgb(40, 116, 240); margin-top: 15px; font-weight: bold;">
+            </div>
+            <div>
+                <div>Become a Seller</div>
+                <div>More</div>
+                <div style="display: flex;">
+                    <div>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div style="margin-left: 10px;">
+                        Cart
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <div>
+                <div>
+                    <h4>CATEGORIES</h4>
+                    <input type="checkbox">
+                    <lable>Tops</lable><br />
+                    <input type="checkbox">
+                    <lable>Tshirt</lable><br />
+                    <input type="checkbox">
+                    <lable>Shirts</lable><br />
+                </div>
+                <div>
+                    <h4>BRAND</h4>
+                    <input type="checkbox">
+                    <lable>Adidas</lable><br />
+                    <input type="checkbox">
+                    <lable>Allen Solly</lable><br />
+                    <input type="checkbox">
+                    <lable>Puma</lable><br />
+                    <input type="checkbox">
+                    <lable>VEROMODA</lable><br />
+                    <input type="checkbox">
+                    <lable>CHANNEL</lable>
+                </div>
+                <div>
+                    <h4>OFFERS</h4>
+                    <input type="checkbox">
+                    <lable>Buy more, Save more</lable><br />
+                    <input type="checkbox">
+                    <lable>No cost EMI</lable><br />
+                    <input type="checkbox">
+                    <lable>Special Price</lable><br />
+                </div>
+                <div>
+                    <h4>DISCOUNT</h4>
+                    <input type="checkbox">
+                    <lable>30% or more</lable><br />
+                    <input type="checkbox">
+                    <lable>40% or more</lable><br />
+                    <input type="checkbox">
+                    <lable>50% or more</lable><br />
+                    <input type="checkbox">
+                    <lable>60% or more</lable><br />
+                    <input type="checkbox">
+                    <lable>70% or more</lable><br />
+                </div>
+            </div>
+            <div id="product">
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+                <div>
+                    <img
+                        src="https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/s/c/p/m-db1024-15-3bros-original-imagz8zjfxthf7kn.jpeg?q=70" />
+                    <h4>Adidas</h4>
+                    <p>Tshirt</p>
+                    <h4>Rs. 3790</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    </div>
+</body>
+
+</html>
